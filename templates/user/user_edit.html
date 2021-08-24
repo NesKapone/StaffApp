@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+{{ profile.user.last_name }} {{ profile.user.first_name }}
+{% endblock %}
+
+
+{% block contents %}
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success my-3">Изменить</button>
+</form>
+
+{% endblock %}
+
