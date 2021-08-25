@@ -14,7 +14,7 @@ from pathlib import Path
 import dj_database_url
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+DISABLE_COLLECTSTATIC=1
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
